@@ -1,6 +1,5 @@
 package Lesson1;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Box <T extends Fruit> {
@@ -15,6 +14,7 @@ public class Box <T extends Fruit> {
     }
 
     public String getFruitName() {
+        if (getBox().size() == 0) return "Пусто";
         return getBox().get(0).getClass().getName();
     }
 
